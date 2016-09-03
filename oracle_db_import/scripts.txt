@@ -1,0 +1,27 @@
+CREATE TABLESPACE X4DATA
+    DATAFILE 'C:\APP\ADMINISTRATOR\product\11.2.0\dbhome_1\database\X4DATA' SIZE 26264M AUTOEXTEND ON NEXT 1M MAXSIZE UNLIMITED
+    EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+    LOGGING
+    ONLINE
+    SEGMENT SPACE MANAGEMENT AUTO
+/
+
+
+
+CREATE TABLESPACE X4INDEX
+    DATAFILE 'C:\APP\ADMINISTRATOR\product\11.2.0\dbhome_1\database\X4INDEX' SIZE 20349M AUTOEXTEND ON NEXT 1M MAXSIZE UNLIMITED
+    EXTENT MANAGEMENT LOCAL AUTOALLOCATE
+    LOGGING
+    ONLINE
+    SEGMENT SPACE MANAGEMENT AUTO
+/
+
+
+Import dump file : 
+impdp X4DBOP/X4DBOP@orcl dumpfile=FannieMaeRepo7.dmp full=y
+
+
+
+Blog : 
+http://www.rebellionrider.com/oracle-data-pump-impdp-expdp/data-pump-expdp-how-to-export-full-database.htm#.V8qE2Pl97IU
+
